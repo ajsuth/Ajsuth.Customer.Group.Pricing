@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Sitecore Commerce Plugin Customers</Description>
+    <VersionPrefix>4.0</VersionPrefix>
+    <Authors>Andrew Sutherland</Authors>
+    <TargetFramework>net471</TargetFramework>
+    <PackageTags>$(PackageTags);Commerce;Plugin;Customers</PackageTags>
+    <PackageIconUrl>http://www.sitecore.net/favicon.ico</PackageIconUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sitecore.Commerce.Core" Version="4.0.*" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Customers" Version="4.0.*" />
+    <PackageReference Include="Sitecore.Commerce.Plugin.Pricing" Version="4.0.*" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>
